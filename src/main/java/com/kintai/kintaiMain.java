@@ -8,7 +8,7 @@ public class kintaiMain {
     public static void main(String[] args){
         if (args[0].equals("input")) {
             try(FileWriter fw = new FileWriter("../../../csv/kintai.csv", true);
-                PrintWriter pw = new PrintWriter(new BufferedWriter(fw));) {
+                PrintWriter pw = new PrintWriter(new BufferedWriter(fw))) {
                 pw.print(args[1]);
                 pw.print(",");
                 pw.print(args[2]);
@@ -16,7 +16,6 @@ public class kintaiMain {
                 pw.print(args[3]);
                 pw.println();
                 System.out.println("勤怠入力が完了しました。");
-                pw.close();
             }
             catch(IOException e){
                 e.printStackTrace();
