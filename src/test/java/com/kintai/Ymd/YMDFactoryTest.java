@@ -6,11 +6,15 @@ import static org.junit.Assert.*;
 
 public class YMDFactoryTest {
     @Test
-    public void YMDに分解できるか() throws Exception {
+    public void YMDを分解できるか() throws Exception {
         String str = "20170528";
-        Integer hoge = 28;
+        Integer dom = 28;
+        Integer month = 5;
+        Integer year = 2017;
         YMD test = new YMDFactory().run(str);
-        assert hoge.equals(test.getDay().getDay());
+        assert dom.equals(test.getDayValue());
+        assert month.equals(test.getMonthValue());
+        assert year.equals(test.getYearValue());
     }
 
 }

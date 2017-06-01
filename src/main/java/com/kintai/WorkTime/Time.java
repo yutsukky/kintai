@@ -10,11 +10,11 @@ public class Time {
     }
 
     public Integer getHourValue() {
-        return hour.getHour();
+        return hour.getValue();
     }
 
     public Integer getMinuteValue() {
-        return minute.getMinute();
+        return minute.getValue();
     }
 
     public Integer getTotal(){

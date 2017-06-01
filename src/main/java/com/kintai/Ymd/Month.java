@@ -1,19 +1,19 @@
 package com.kintai.Ymd;
 
-public class Month {
-    private Integer month;
+import com.kintai.Limitter.Limit;
+import com.kintai.Limitter.Limitter;
 
-    public Month(Integer month){
-        if(month > 12){
-            throw new RuntimeException("月の入力値が不適切です．");
-        }
-        if(month < 1){
-            throw new RuntimeException("月の入力値が不適切です．");
-        }
-        this.month = month;
+public class Month {
+    private Integer value;
+
+    public Month(Integer value){
+        Integer MIN = 1;
+        Integer MAX = 12;
+        new Limitter().run(value,new Limit(MIN,MAX));
+        this.value = value;
     }
 
-    public Integer getMonth() {
-        return month;
+    public Integer getValue() {
+        return value;
     }
 }

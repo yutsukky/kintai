@@ -13,12 +13,14 @@ public class DivideTest {
         String[] str = {"20170529","0900","1800"};
         Year year = new Year(2017);
         Month month = new Month(5);
-        Day day = new Day(29);
+        DayOfMonth day = new DayOfMonth(29);
         YM ym = new YM(year,month);
         YMD ymd = new YMD(ym,day);
         Behind behind = new Behind(str);
         Divide divide = new Divide(behind);
-        assert ymd.getDay().getDay().equals(divide.getYmd().getDay().getDay());
+        assert ymd.getDayValue().equals(divide.getYmd().getDayValue());
+        assert ymd.getMonthValue().equals(divide.getYmd().getMonthValue());
+        assert ymd.getYearValue().equals(divide.getYmd().getYearValue());
     }
     @Test
     public void 正しく勤務時間を分割できる場合(){
@@ -33,7 +35,10 @@ public class DivideTest {
         WorkTime worktime = new WorkTime(st,et);
         Behind behind = new Behind(str);
         Divide divide = new Divide(behind);
+        assert worktime.getStartHour().equals(divide.getWorktime().getStartHour());
         assert worktime.getEndHour().equals(divide.getWorktime().getEndHour());
+        assert worktime.getStartMinute().equals(divide.getWorktime().getStartMinute());
+        assert worktime.getEndMinute().equals(divide.getWorktime().getEndMinute());
     }
 
 }

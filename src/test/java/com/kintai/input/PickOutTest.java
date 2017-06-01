@@ -1,6 +1,5 @@
 package com.kintai.input;
 
-import com.kintai.Behind;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -8,19 +7,20 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class PickOutTest {
+
     @Test
-    public void 正常に引数の先頭を引っ張ってこれるか() throws Exception {
-        String[] args = {"aiueo", "a","b","c"};
+    public void 引数の先頭を引っ張ってこれるか() throws Exception {
+        String[] args = {"input", "20170518","0850","1930"};
         PickOut test = new PickOut(args);
-        assert test.getHead().equals("aiueo");
+        assert test.getHead().getString().equals("input");
     }
 
     @Test
-    public void 正常に第二引数以降を引っ張ってこれるか() throws Exception{
-        String[] args = {"aiueo", "a","b","c"};
-        String[] temp = {"a","b","c"};
+    public void 第二引数以降を引っ張ってこれるか() throws Exception{
+        String[] args = {"input", "20170518","0850","1930"};
+        String[] temp = {"20170518","0850","1930"};
         PickOut test = new PickOut(args);
-        assert Arrays.equals(temp,test.getBehind().getBehind());
+        assert Arrays.equals(temp,test.getBehind().getArgs());
     }
 
     @Test(expected = RuntimeException.class)

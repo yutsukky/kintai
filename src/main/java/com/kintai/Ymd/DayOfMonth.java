@@ -1,14 +1,14 @@
-package com.kintai.WorkTime;
+package com.kintai.Ymd;
 
 import com.kintai.Limitter.Limit;
 import com.kintai.Limitter.Limitter;
 
-public class Minute {
+public class DayOfMonth {
     private Integer value;
 
-    public Minute(Integer value){
-        Integer MIN = 0;
-        Integer MAX = 59;
+    public DayOfMonth(Integer value){
+        Integer MIN = 1;
+        Integer MAX = 31;
         new Limitter().run(value,new Limit(MIN,MAX));
         this.value = value;
     }

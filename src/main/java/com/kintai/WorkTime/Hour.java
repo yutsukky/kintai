@@ -1,19 +1,19 @@
 package com.kintai.WorkTime;
 
-public class Hour {
-    private Integer hour;
+import com.kintai.Limitter.Limit;
+import com.kintai.Limitter.Limitter;
 
-    public Hour(Integer hour){
-        if(hour < 0){
-            throw new RuntimeException("時間の入力値が不適切です．");
-        }
-        if(hour > 23){
-            throw new RuntimeException("時間の入力値が不適切です．");
-        }
-        this.hour = hour;
+public class Hour {
+    private Integer value;
+
+    public Hour(Integer value){
+        Integer MIN = 0;
+        Integer MAX = 23;
+        new Limitter().run(value,new Limit(MIN,MAX));
+        this.value = value;
     }
 
-    public Integer getHour() {
-        return hour;
+    public Integer getValue() {
+        return value;
     }
 }

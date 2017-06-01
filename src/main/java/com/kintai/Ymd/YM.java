@@ -13,7 +13,15 @@ public class YM {
         return year;
     }
 
+    public Integer getYearValue(){
+        return year.getValue();
+    }
+
     public Month getMonth() {
         return month;
+    }
+
+    public Integer getMonthValue(){
+        return month.getValue();
     }
 }

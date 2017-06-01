@@ -1,16 +1,13 @@
 package com.kintai.Ymd;
 
 public class Year {
-    private Integer year;
+    private Integer value;
 
-    public Year(Integer year){
-        if(year < 2017){
-            throw new RuntimeException("西暦の入力値が過去です．");
-        }
-        this.year = year;
+    public Year(Integer value){
+        this.value = value;
     }
 
-    public Integer getYear() {
-        return year;
+    public Integer getValue() {
+        return value;
     }
 }

@@ -1,13 +1,13 @@
 package com.kintai;
 
 public class Head {
-    private String Head;
+    private String str;
 
     public Head(String str){
-        this.Head = str;
+        this.str = str;
     }
 
-    public String getHead() {
-        return Head;
+    public String getString() {
+        return str;
     }
 }

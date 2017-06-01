@@ -11,13 +11,8 @@ public class Divide {
     private WorkTime worktime;
 
     public Divide(Behind behind){
-        try {
-            this.ymd = new YMDTransform().run(behind.getFirst());
-            this.worktime = new WorkTimeTransform().run(behind.getSecond(),behind.getThird());
-        }
-        catch(ArrayIndexOutOfBoundsException e){
-            throw new RuntimeException("第二引数以降が不正です．",e);
-        }
+        this.ymd = new YMDTransform().run(behind.getFirst());
+        this.worktime = new WorkTimeTransform().run(behind.getSecond(),behind.getThird());
     }
 
     public YMD getYmd() {

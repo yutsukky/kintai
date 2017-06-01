@@ -7,7 +7,6 @@ import java.io.PrintWriter;
 
 public class CSVWrite {
     public void execute(String str){
-        //String filename = "../../../csv/kintai.csv";
         String filename = "csv/kintai.csv";
         try(FileWriter fw = new FileWriter(filename, true);
             PrintWriter pw = new PrintWriter(new BufferedWriter(fw))){

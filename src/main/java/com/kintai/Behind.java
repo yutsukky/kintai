@@ -1,25 +1,25 @@
 package com.kintai;
 
 public class Behind {
-    private String[] behind;
+    private String[] args;
 
     public Behind(String[] args){
-        this.behind = args;
+        this.args = args;
     }
 
-    public String[] getBehind() {
-        return behind;
+    public String[] getArgs() {
+        return args;
     }
 
     public String getFirst(){
-        return behind[0];
+        return args[0];
     }
 
     public String getSecond(){
-        return behind[1];
+        return args[1];
     }
 
     public String getThird(){
-        return behind[2];
+        return args[2];
     }
 }

@@ -12,13 +12,7 @@ public class PickOut {
     private final Behind behind;
 
     public PickOut(String[] args) {
-        try{
-            this.head = new Head(args[0]);
-        }
-        catch(ArrayIndexOutOfBoundsException e){
-            throw new RuntimeException("第一引数が不正です．",e);
-        }
-
+        this.head = new Head(args[0]);
         List<String> temp = new ArrayList<>(Arrays.asList(args));
         temp.remove(args[0]);
         this.behind = new Behind(temp.toArray(new String[temp.size()]));

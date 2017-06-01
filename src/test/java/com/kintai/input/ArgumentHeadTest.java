@@ -13,7 +13,7 @@ public class ArgumentHeadTest {
     @Test
     public void inputの場合() throws Exception {
         Head head = new Head("input");
-        String[] str = {"20171717","20171717"};
+        String[] str = {"20170529","0900","1830"};
         Behind behind = new Behind(str);
         ArgumentHead ah = new ArgumentHead();
         ah.correct(head,behind);
@@ -22,7 +22,7 @@ public class ArgumentHeadTest {
     @Test
     public void totalの場合() throws Exception {
         Head head = new Head("total");
-        String[] str = {"20171717","20171717"};
+        String[] str = {};
         Behind behind = new Behind(str);
         ArgumentHead ah = new ArgumentHead();
         ah.correct(head,behind);
@@ -30,8 +30,8 @@ public class ArgumentHeadTest {
 
     @Test(expected = RuntimeException.class)
     public void それ以外の場合() throws Exception {
-        Head head = new Head("hogehoge");
-        String[] str = {"20171717","20171717"};
+        Head head = new Head("hoge");
+        String[] str = {"aaaaa","bbbbb"};
         Behind behind = new Behind(str);
         ArgumentHead ah = new ArgumentHead();
         ah.correct(head,behind);

@@ -26,12 +26,9 @@ public class ArgumentHead {
         public static Command get(Head command){
             return Stream
                     .of(Command.values())
-                    .filter(v -> v.name().equals(command.getHead()))
+                    .filter(v -> v.name().equals(command.getString()))
                     .findFirst()
                     .orElseThrow(() -> new RuntimeException("入力値が不正です．"));
-
         }
     }
-
-
 }

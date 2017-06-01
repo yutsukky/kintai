@@ -6,9 +6,7 @@ public class WorkTime {
     private EndTime end;
 
     public WorkTime(StartTime start,EndTime end){
-        if(start.getStartTotal() >= end.getEndTotal()){
-            throw new RuntimeException("始業時間と終業時間の大小関係が不適切です．");
-        }
+        //終業時間の方が始業時間より早いときは朝まで仕事したとみなす
         this.start = start;
         this.end = end;
     }

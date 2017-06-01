@@ -4,8 +4,12 @@ public class StartTime {
     private Time start;
 
     public StartTime(Time start){
-        final Integer START_LIMIT = 900;
-        if(start.getTotal() > START_LIMIT){
+        final Integer HOUR_LIMIT = 9;
+        final Integer MINUTE_LIMIT = 0;
+        if(start.getHourValue() > HOUR_LIMIT){
+            throw new RuntimeException("遅刻は即クビです．");
+        }
+        if(start.getHourValue().equals(HOUR_LIMIT) && (start.getMinuteValue() > MINUTE_LIMIT)){
             throw new RuntimeException("遅刻は即クビです．");
         }
         this.start = start;
