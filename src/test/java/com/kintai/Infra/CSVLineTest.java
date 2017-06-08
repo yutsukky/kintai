@@ -1,6 +1,6 @@
 package com.kintai.Infra;
 
-import com.kintai.Domain.WorkTime.*;
+import com.kintai.Domain.HM.*;
 import com.kintai.Domain.Ymd.*;
 import com.kintai.Infra.CSVLine.CSVLine;
 import org.junit.Test;
