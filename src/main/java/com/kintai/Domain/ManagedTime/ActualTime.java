@@ -1,15 +1,16 @@
 package com.kintai.Domain.ManagedTime;
 
-import com.kintai.Domain.WorkTime.Time;
+
+import com.kintai.Domain.HM.HM;
 
 public class ActualTime {
-    private Time time;
+    private HM hm;
 
-    public ActualTime(Time time){
-        this.time = time;
+    public ActualTime(HM hm){
+        this.hm = hm;
     }
 
-    public Time getTime() {
-        return time;
+    public HM getTime() {
+        return hm;
     }
 }

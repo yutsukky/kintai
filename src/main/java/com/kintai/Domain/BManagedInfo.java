@@ -1,13 +1,10 @@
 package com.kintai.Domain;
 
 import com.kintai.Domain.ManagedTime.BManagedTime;
-import com.kintai.Domain.ManagedTime.BManagedTimeMaker;
 import com.kintai.Domain.WorkTime.WorkTime;
 import com.kintai.Domain.WorkTime.WorkTimeTransform;
-import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.Ymd.YMDFactoryForTotal;
 import com.kintai.Domain.Ymd.YMDForTotal;
-import com.kintai.Domain.Ymd.YMDTransform;
 import com.kintai.Infra.Behind;
 
 public class BManagedInfo {
