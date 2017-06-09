@@ -1,4 +1,4 @@
-package com.kintai.Domain.WorkTime;
+package com.kintai.Domain.HM;
 
 
 public class WorkTime {

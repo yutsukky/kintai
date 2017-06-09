@@ -1,14 +1,14 @@
-package com.kintai.Domain.WorkTime;
+package com.kintai.Domain.HM;
 
 import com.kintai.Domain.Limit;
 import com.kintai.Domain.Limitter;
 
-public class Hour {
+public class Minute {
     private Integer value;
 
-    public Hour(Integer value){
+    public Minute(Integer value){
         Integer MIN = 0;
-        Integer MAX = 23;
+        Integer MAX = 59;
         new Limitter().run(value,new Limit(MIN,MAX));
         this.value = value;
     }

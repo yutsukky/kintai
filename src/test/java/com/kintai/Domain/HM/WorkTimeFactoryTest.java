@@ -1,7 +1,5 @@
-package com.kintai.Domain.WorkTime;
+package com.kintai.Domain.HM;
 
-import com.kintai.Domain.WorkTime.WorkTime;
-import com.kintai.Domain.WorkTime.WorkTimeFactory;
 import org.junit.Test;
 
 public class WorkTimeFactoryTest {

@@ -1,8 +1,6 @@
-package com.kintai.Domain.WorkTime;
+package com.kintai.Domain.HM;
 
-import com.kintai.Domain.WorkTime.Hour;
-import com.kintai.Domain.WorkTime.Minute;
-import com.kintai.Domain.WorkTime.Time;
+import com.kintai.Domain.HM.Time;
 import org.junit.Test;
 
 public class TimeTest {
