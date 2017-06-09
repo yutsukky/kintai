@@ -1,4 +1,4 @@
-package com.kintai.Domain;
+package com.kintai.Domain.DataString;
 
 public class TimeString {
     private String value;

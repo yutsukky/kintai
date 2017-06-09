@@ -1,6 +1,7 @@
 package com.kintai.Domain;
 
 import com.kintai.Domain.HM.HM;
+import com.kintai.Domain.HM.HMFactory;
 import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.Ymd.YMDTransform;
 

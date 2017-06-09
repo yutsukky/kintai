@@ -1,6 +1,6 @@
-package com.kintai.Domain;
+package com.kintai.Domain.HM;
 
-import com.kintai.Domain.HM.*;
+import com.kintai.Domain.DataString.TimeString;
 
 public class HMFactory {
     public HM run(TimeString timeString){

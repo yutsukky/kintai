@@ -1,6 +1,6 @@
 package com.kintai.Domain.Ymd;
 
-import com.kintai.Domain.YMDString;
+import com.kintai.Domain.DataString.YMDString;
 
 public class YMDFactory {
     public YMD run(YMDString ymdString){
