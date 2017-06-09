@@ -7,6 +7,5 @@ import java.util.HashMap;
 public class TotalReader {
     public void run(){
         HashMap csvHash = new CSVRead().execute();
-
     }
 }
