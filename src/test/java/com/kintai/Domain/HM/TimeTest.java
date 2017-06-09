@@ -1,6 +1,5 @@
 package com.kintai.Domain.HM;
 
-import com.kintai.Domain.HM.Time;
 import org.junit.Test;
 
 public class TimeTest {
@@ -9,8 +8,8 @@ public class TimeTest {
         Integer test = 1030;
         Hour hour = new Hour(10);
         Minute minute = new Minute(30);
-        Time time = new Time(hour,minute);
-        assert test.equals(time.getTotal());
+        HM hm = new HM(hour,minute);
+        assert test.equals(hm.getTotal());
     }
 
 }
