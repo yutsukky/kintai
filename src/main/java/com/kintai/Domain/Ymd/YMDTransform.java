@@ -1,12 +1,14 @@
 package com.kintai.Domain.Ymd;
 
+import com.kintai.Domain.YMDString;
+
 public class YMDTransform {
     private final Integer YMD_LIMIT = 8;
 
-    public YMD run(String raw){
-        if(!YMD_LIMIT.equals(raw.length())){
+    public YMD run(YMDString ymdString){
+        if(!YMD_LIMIT.equals(ymdString.getLength())){
             throw new RuntimeException("年月日の桁数が不正です．");
         }
-        return new YMDFactory().run(raw);
+        return new YMDFactory().run(ymdString);
     }
 }
