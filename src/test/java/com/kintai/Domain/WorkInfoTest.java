@@ -1,7 +1,7 @@
 package com.kintai.Domain;
 
 import com.kintai.Infra.Behind;
-import com.kintai.Domain.WorkTime.*;
+import com.kintai.Domain.HM.*;
 import com.kintai.Domain.Ymd.*;
 import org.junit.Test;
 

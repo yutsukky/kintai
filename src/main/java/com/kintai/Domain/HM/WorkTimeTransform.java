@@ -1,5 +1,4 @@
-package com.kintai.Domain.WorkTime;
-
+package com.kintai.Domain.HM;
 
 public class WorkTimeTransform {
     private final Integer WORKTIME_LIMIT = 4;

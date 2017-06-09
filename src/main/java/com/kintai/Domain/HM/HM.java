@@ -1,13 +1,17 @@
-package com.kintai.Domain.WorkTime;
+package com.kintai.Domain.HM;
 
-public class Time {
+public class HM {
     private Hour hour;
     private Minute minute;
 
-    public Time(Hour hour,Minute minute){
+    public HM(Hour hour,Minute minute){
         this.hour = hour;
         this.minute = minute;
     }
+
+    public Hour getHour(){ return hour; }
+
+    public Minute getMinute(){ return minute; }
 
     public Integer getHourValue() {
         return hour.getValue();

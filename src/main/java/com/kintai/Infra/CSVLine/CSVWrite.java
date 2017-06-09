@@ -1,4 +1,4 @@
-package com.kintai.Infra;
+package com.kintai.Infra.CSVLine;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
