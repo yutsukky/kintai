@@ -13,6 +13,10 @@ public class HM {
 
     public Minute getMinute(){ return minute; }
 
+    public String getHMString(){
+        return String.format("%02d%02d",getHourValue(),getMinuteValue());
+    }
+
     public Integer getHourValue() {
         return hour.getValue();
     }

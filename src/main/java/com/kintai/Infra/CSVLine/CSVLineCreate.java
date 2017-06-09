@@ -1,5 +1,7 @@
 package com.kintai.Infra.CSVLine;
 
+import com.kintai.Domain.EndYMDHM;
+import com.kintai.Domain.StartYMDHM;
 import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.WorkInfo;
 
@@ -7,9 +9,9 @@ public class CSVLineCreate {
     private CSVLine csvLine;
 
     public CSVLineCreate(WorkInfo workInfo) {
-        YMD ymd = workInfo.getYmd();
-        WorkTime worktime = workInfo.getWorktime();
-        csvLine = new CSVLine(ymd, worktime);
+        StartYMDHM startYMDHM = workInfo.getStartYMDHM();
+        EndYMDHM endYMDHM = workInfo.getEndYMDHM();
+        csvLine = new CSVLine(startYMDHM, endYMDHM);
     }
 
     public String[] getCsvLineArray() {

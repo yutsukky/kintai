@@ -29,6 +29,10 @@ public class YMD {
         return day;
     }
 
+    public String getYMDString(){
+        return String.format("%04d%02d%02d",getYearValue(),getMonthValue(),getDayValue());
+    }
+
     public Integer getDayValue(){
         return day.getValue();
     }

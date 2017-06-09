@@ -1,15 +1,15 @@
 package com.kintai.Domain.ManagedTime;
 
-import com.kintai.Domain.WorkTime.Time;
+import com.kintai.Domain.HM.HM;
 
 public class OverTime {
-    private Time time;
+    private HM hm;
 
-    public OverTime(Time time){
-        this.time = time;
+    public OverTime(HM hm){
+        this.hm = hm;
     }
 
-    public Time getTime() {
-        return time;
+    public HM getHm() {
+        return hm;
     }
 }
