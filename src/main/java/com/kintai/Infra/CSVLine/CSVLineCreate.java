@@ -1,6 +1,5 @@
 package com.kintai.Infra.CSVLine;
 
-import com.kintai.Domain.HM.WorkTime;
 import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.WorkInfo;
 
