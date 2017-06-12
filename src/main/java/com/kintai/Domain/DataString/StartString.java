@@ -9,6 +9,10 @@ public class StartString {
         hmString = new HMString(hm);
     }
 
+    public HMString getHmString(){
+        return hmString;
+    }
+
     public String getYMDStringValue(){
         return ymdString.getValue();
     }

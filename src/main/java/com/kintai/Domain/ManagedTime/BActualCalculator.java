@@ -6,7 +6,7 @@ import com.kintai.Domain.HM.Minute;
 import com.kintai.Domain.WorkInfo;
 
 public class BActualCalculator {
-    public ActualTime calculate(WorkInfo workInfo){
+    public ActualTime calculate(HM startHm,HM endHm){
         return new ActualTime(new HM(new Hour(1),new Minute(1)));
     }
 }

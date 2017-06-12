@@ -1,6 +1,6 @@
 package com.kintai.Service;
 
-import com.kintai.Domain.BehindToDomain;
+import com.kintai.Domain.DataString.BehindToDomain;
 import com.kintai.Repository.WorkInfoRepository;
 import com.kintai.Domain.WorkInfo;
 

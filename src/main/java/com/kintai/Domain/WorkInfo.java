@@ -1,5 +1,7 @@
 package com.kintai.Domain;
 
+import com.kintai.Domain.DataString.BehindToDomain;
+
 public class WorkInfo {
     private StartYMDHM startYMDHM;
     private EndYMDHM endYMDHM;

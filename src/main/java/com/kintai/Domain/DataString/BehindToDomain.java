@@ -1,8 +1,5 @@
-package com.kintai.Domain;
+package com.kintai.Domain.DataString;
 
-import com.kintai.Domain.DataString.SEString;
-import com.kintai.Domain.DataString.TimeString;
-import com.kintai.Domain.DataString.YMDString;
 import com.kintai.Infra.Behind;
 
 public class BehindToDomain {
@@ -22,11 +19,11 @@ public class BehindToDomain {
         return seString;
     }
 
-    public TimeString getStartString(){
+    public HMString getStartString(){
         return seString.getStartString();
     }
 
-    public TimeString getEndString(){
+    public HMString getEndString(){
         return seString.getEndString();
     }
 }

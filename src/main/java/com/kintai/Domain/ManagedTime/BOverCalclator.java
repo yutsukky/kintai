@@ -6,7 +6,7 @@ import com.kintai.Domain.HM.Minute;
 import com.kintai.Domain.WorkInfo;
 
 public class BOverCalclator {
-    public OverTime calculate(WorkInfo workInfo){
+    public OverTime calculate(HM startHm,HM endHm){
         return new OverTime(new HM(new Hour(1),new Minute(1)));
     }
 }

@@ -1,7 +1,10 @@
 package com.kintai.Domain.Ymd;
 
+import com.kintai.Domain.DataString.StartString;
+
 public class YMDFactoryForTotal {
-    public YMDForTotal run(String raw){
+    public YMDForTotal run(StartString startString){
+        String raw = startString.getYMDStringValue();
         String tmp_year = raw.substring(0,4);
         String tmp_month = raw.substring(4,6);
         String tmp_day = raw.substring(6,8);
