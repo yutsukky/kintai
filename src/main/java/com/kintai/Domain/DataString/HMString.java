@@ -1,19 +1,17 @@
 package com.kintai.Domain.DataString;
 
 public class HMString {
-    private TimeString startString;
-    private TimeString endString;
+    private String value;
 
-    public HMString(TimeString startString, TimeString endString){
-        this.startString = startString;
-        this.endString = endString;
+    public HMString(String value){
+        this.value = value;
     }
 
-    public TimeString getStartString() {
-        return startString;
+    public String getValue() {
+        return value;
     }
 
-    public TimeString getEndString() {
-        return endString;
+    public Integer getLength(){
+        return value.length();
     }
 }

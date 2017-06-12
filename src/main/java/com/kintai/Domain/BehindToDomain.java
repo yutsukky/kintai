@@ -1,34 +1,32 @@
 package com.kintai.Domain;
 
-import com.kintai.Domain.DataString.HMString;
+import com.kintai.Domain.DataString.SEString;
 import com.kintai.Domain.DataString.TimeString;
 import com.kintai.Domain.DataString.YMDString;
 import com.kintai.Infra.Behind;
 
 public class BehindToDomain {
     private YMDString ymdString;
-    private HMString hmString;
+    private SEString seString;
 
     public BehindToDomain(Behind behind){
         ymdString = new YMDString(behind.getFirst());
-        TimeString startString = new TimeString(behind.getSecond());
-        TimeString endString = new TimeString(behind.getThird());
-        hmString = new HMString(startString,endString);
+        seString = new SEString(behind.getSecond(),behind.getThird());
     }
 
     public YMDString getYmdString() {
         return ymdString;
     }
 
-    public HMString getSeString() {
-        return hmString;
+    public SEString getSeString() {
+        return seString;
     }
 
     public TimeString getStartString(){
-        return hmString.getStartString();
+        return seString.getStartString();
     }
 
     public TimeString getEndString(){
-        return hmString.getEndString();
+        return seString.getEndString();
     }
 }

@@ -10,7 +10,7 @@ public class CSVHashCreate {
         String tmp;
         while ((tmp = br.readLine()) != null) {
             String array[] = tmp.split(",");
-            csvHash.put(array[0],new String[]{array[1],array[2]});
+            csvHash.put(array[0],new String[]{array[1],array[2],array[3]});
         }
         return csvHash;
     }
