@@ -10,5 +10,6 @@ public class BManagedInfo {
 
     public BManagedInfo(DomainString domainString){
         ymdForTotal = new YMDFactoryForTotal().run(domainString.getStartString());
+        managedTime = new BManagedTimeCalculator().calculate(domainString);
     }
 }

@@ -14,7 +14,7 @@ public class BManagedTimeCalculator {
         EndString endString = domainString.getEndString();
         HM endHm = new HMFactory().run(endString.getHmString());
         ActualTime actualTime = new BActualCalculator().calculate(startHm,endHm);
-        OverTime overTime = new BOverCalclator().calculate(startHm,endHm);
+        OverTime overTime = new BOverCalclator().calculate(startHm,endHm,actualTime);
         return new ManagedTime(actualTime,overTime);
     }
 }
