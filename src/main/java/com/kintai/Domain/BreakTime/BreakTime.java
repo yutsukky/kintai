@@ -14,8 +14,20 @@ public class BreakTime {
         end = new HM(new Hour(13),new Minute(0));
     }
 
+    public HM getStart(){
+        return start;
+    }
+
     public HM getEnd() {
         return end;
+    }
+
+    public Integer getStartTotal(){
+        return start.getTotal();
+    }
+
+    public Integer getEndTotal(){
+        return end.getTotal();
     }
 
     public HM getValue(){
