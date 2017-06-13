@@ -7,6 +7,11 @@ import com.kintai.Domain.WorkInfo;
 
 public class BActualCalculator {
     public ActualTime calculate(HM startHm,HM endHm){
-        return new ActualTime(new HM(new Hour(1),new Minute(1)));
+        Integer A_DAY_HOUR = 24;
+        HM limitedEndHm = endHm;
+        if(endHm.getHourValue() >= A_DAY_HOUR){
+            limitedEndHm = new HM(new Hour(A_DAY_HOUR),new Minute(0));
+        }
+        return new ActualTime(new SubtractionBreakTime().run(startHm,limitedEndHm));
     }
 }

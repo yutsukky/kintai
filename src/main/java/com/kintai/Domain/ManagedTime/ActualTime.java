@@ -10,8 +10,16 @@ public class ActualTime {
         this.hm = hm;
     }
 
-    public HM getTime() {
+    public HM getHm() {
         return hm;
+    }
+
+    public Integer getHourValue(){
+        return hm.getHourValue();
+    }
+
+    public Integer getMinuteValue(){
+        return hm.getMinuteValue();
     }
 
     public boolean isOver(){
