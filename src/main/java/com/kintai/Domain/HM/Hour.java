@@ -8,7 +8,7 @@ public class Hour {
 
     public Hour(Integer value){
         Integer MIN = 0;
-        Integer MAX = 23;
+        Integer MAX = 48;
         new Limitter().run(value,new Limit(MIN,MAX));
         this.value = value;
     }

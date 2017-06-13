@@ -9,9 +9,9 @@ public class BreakTime {
     private HM start;
     private HM end;
 
-    public BreakTime(){
-        start = new HM(new Hour(12),new Minute(0));
-        end = new HM(new Hour(13),new Minute(0));
+    public BreakTime(Integer startHour,Integer startMinute,Integer endHour,Integer endMinute){
+        start = new HM(new Hour(startHour),new Minute(startMinute));
+        end = new HM(new Hour(endHour),new Minute(endMinute));
     }
 
     public HM getStart(){

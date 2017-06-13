@@ -13,7 +13,7 @@ public class MinusBreakTimeTest {
         HM end = new HM(new Hour(12),new Minute(30));
         HM diff = new TimeCalculator(start,end).getHM();
 
-        new MinusBreakTime().subtraction(start,end,diff,new BreakTime());
+        new MinusBreakTime().subtraction(start,end,diff,new BreakTime(12,0,13,0));
     }
 
 }
