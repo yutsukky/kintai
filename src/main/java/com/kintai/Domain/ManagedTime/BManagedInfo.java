@@ -1,15 +1,17 @@
 package com.kintai.Domain.ManagedTime;
 
 import com.kintai.Domain.DataString.DomainString;
-import com.kintai.Domain.Ymd.YMDFactoryForTotal;
-import com.kintai.Domain.Ymd.YMDForTotal;
+import com.kintai.Domain.DataString.YMDHMString;
+import com.kintai.Domain.Ymd.YMD;
+import com.kintai.Domain.Ymd.YMDFactory;
 
 public class BManagedInfo {
-    private YMDForTotal ymdForTotal;
+    private YMD ymd;
     private ManagedTime managedTime;
 
     public BManagedInfo(DomainString domainString){
-        ymdForTotal = new YMDFactoryForTotal().run(domainString.getStartString());
+        YMDHMString ymdhmString = domainString.getStartString();
+        ymd = new YMDFactory().run(ymdhmString.getYmdString());
         managedTime = new BManagedTimeCalculator().calculate(domainString);
     }
 }

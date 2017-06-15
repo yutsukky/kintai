@@ -1,6 +1,8 @@
 package com.kintai.Domain.Ymd;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class YMD {
 
@@ -12,6 +14,10 @@ public class YMD {
 
     public LocalDate getLocalDate() {
         return localDate;
+    }
+
+    public LocalDateTime atTime(LocalTime localTime){
+        return localDate.atTime(localTime);
     }
 
     public String getYMDString(){

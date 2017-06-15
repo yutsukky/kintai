@@ -3,15 +3,17 @@ package com.kintai.Domain;
 import com.kintai.Domain.HM.*;
 import com.kintai.Domain.Ymd.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class StartYMDHM {
     private LocalDateTime localDateTime;
 
-    public StartYMDHM(LocalDate localDate, LocalTime localTime){
-        this.localDateTime = localDate.atTime(localTime);
+    public StartYMDHM(LocalDateTime localDateTime){
+        this.localDateTime = localDateTime;
+    }
+
+    public LocalDateTime getLocalDateTime(){
+        return localDateTime;
     }
 
     public YMD getYmd() {

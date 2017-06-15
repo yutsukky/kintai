@@ -1,6 +1,5 @@
 package com.kintai.Domain;
 
-import com.kintai.Domain.DataString.BehindToDomainString;
 import com.kintai.Domain.DataString.DomainString;
 
 public class WorkInfo {
@@ -8,8 +7,8 @@ public class WorkInfo {
     private EndYMDHM endYMDHM;
 
     public WorkInfo(DomainString domainString){
-        this.startYMDHM = new StartYMDHMFactory().run(domainString.getStartString());
-        this.endYMDHM = new EndYMDHMFactory().run(domainString.getEndString());
+        startYMDHM = new StartYMDHMFactory().run(domainString.getStartString());
+        endYMDHM = new EndYMDHMFactory().run(domainString.getEndString(),startYMDHM);
     }
 
     public StartYMDHM getStartYMDHM() {

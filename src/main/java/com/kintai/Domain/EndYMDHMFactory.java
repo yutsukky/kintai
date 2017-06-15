@@ -7,12 +7,13 @@ import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.Ymd.YMDFactory;
 
 public class EndYMDHMFactory {
-    private YMD ymd;
-    private HM hm;
-
-    public EndYMDHM run(YMDHMString ymdhmString){
-        this.ymd = new YMDFactory().run(ymdhmString.getYmdString());
-        this.hm = new HMFactory().run(ymdhmString.getHmString());
-        return new EndYMDHM(ymd.getLocalDate(),hm.getLocalTime());
+    public EndYMDHM run(YMDHMString ymdhmString,StartYMDHM startYMDHM) {
+        YMD ymd = new YMDFactory().run(ymdhmString.getYmdString());
+        HM hm = new HMFactory().run(ymdhmString.getHmString());
+        EndYMDHM endYMDHM = new EndYMDHM(ymd.atTime(hm.getLocalTime()));
+        if(endYMDHM.isBefore(startYMDHM)){
+            return endYMDHM.plusADay();
+        }
+        return endYMDHM;
     }
 }

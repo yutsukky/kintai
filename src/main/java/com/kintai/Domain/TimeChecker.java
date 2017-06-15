@@ -5,7 +5,7 @@ import com.kintai.Domain.HM.Minute;
 
 import java.time.LocalTime;
 
-public class DelayChecker {
+public class TimeChecker {
     public void check(LocalTime startTime){
         Integer HOUR_LIMIT = 9;
         Integer MINUTE_LIMIT = 0;
