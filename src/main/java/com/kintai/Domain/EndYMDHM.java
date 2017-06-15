@@ -1,25 +1,24 @@
 package com.kintai.Domain;
 
-import com.kintai.Domain.DataString.BehindToDomain;
 import com.kintai.Domain.HM.HM;
-import com.kintai.Domain.HM.HMFactory;
 import com.kintai.Domain.Ymd.YMD;
-import com.kintai.Domain.Ymd.YMDTransform;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class EndYMDHM {
-    private YMD ymd;
-    private HM hm;
+    private LocalDateTime localDateTime;
 
-    public EndYMDHM(BehindToDomain behindToDomain){
-        ymd = new YMDTransform().run(behindToDomain.getYmdString());
-        hm = new HMFactory().run(behindToDomain.getEndString());
+    public EndYMDHM(LocalDate localDate, LocalTime localTime){
+        this.localDateTime = localDate.atTime(localTime);
     }
 
     public YMD getYmd() {
-        return ymd;
+        return new YMD(localDateTime.toLocalDate());
     }
 
     public HM getHm(){
-        return hm;
+        return new HM(localDateTime.toLocalTime());
     }
 }

@@ -1,28 +1,32 @@
 package com.kintai.Domain.HM;
 
-public class HM {
-    private Hour hour;
-    private Minute minute;
+import java.time.LocalTime;
 
-    public HM(Hour hour,Minute minute){
-        this.hour = hour;
-        this.minute = minute;
+public class HM {
+    private LocalTime localTime;
+
+    public HM(LocalTime localTime){
+        this.localTime = localTime;
     }
 
-    public Hour getHour(){ return hour; }
+    public LocalTime getLocalTime(){
+        return localTime;
+    }
 
-    public Minute getMinute(){ return minute; }
+    public Hour getHour(){ return new Hour(getHourValue()); }
+
+    public Minute getMinute(){ return new Minute(getMinuteValue()); }
 
     public String getHMString(){
         return String.format("%02d%02d",getHourValue(),getMinuteValue());
     }
 
     public Integer getHourValue() {
-        return hour.getValue();
+        return localTime.getHour();
     }
 
     public Integer getMinuteValue() {
-        return minute.getValue();
+        return localTime.getMinute();
     }
 
     public Integer getTotal(){
