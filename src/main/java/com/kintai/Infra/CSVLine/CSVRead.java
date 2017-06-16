@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class CSVRead {
-    public HashMap execute(){
+    public HashMap<String,String[]> execute(){
         String filename = "csv/kintai.csv";
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             return new CSVHashCreate().execute(br);

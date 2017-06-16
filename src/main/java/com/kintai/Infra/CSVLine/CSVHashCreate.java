@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class CSVHashCreate {
-    public HashMap execute(BufferedReader br) throws IOException {
+    public HashMap<String,String[]> execute(BufferedReader br) throws IOException {
         HashMap<String,String[]> csvHash = new HashMap<>();
         String tmp;
         while ((tmp = br.readLine()) != null) {

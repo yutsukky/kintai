@@ -1,19 +1,19 @@
 package com.kintai.Domain.ManagedTime;
 
 public class TotalManageTime {
-    private Integer actual;
-    private Integer over;
+    private TotalTime actual;
+    private TotalTime over;
 
-    public TotalManageTime(Integer actual,Integer over){
+    public TotalManageTime(TotalTime actual, TotalTime over){
         this.actual = actual;
         this.over = over;
     }
 
-    public Integer getActual() {
+    public TotalTime getActual() {
         return actual;
     }
 
-    public Integer getOver() {
+    public TotalTime getOver() {
         return over;
     }
 }
