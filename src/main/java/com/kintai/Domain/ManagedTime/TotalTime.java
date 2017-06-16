@@ -8,4 +8,12 @@ public class TotalTime {
         this.hour = hour;
         this.minute = minute;
     }
+
+    public Integer getHour() {
+        return hour;
+    }
+
+    public Integer getMinute() {
+        return minute;
+    }
 }

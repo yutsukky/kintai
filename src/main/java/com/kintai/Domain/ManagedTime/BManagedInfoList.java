@@ -1,7 +1,5 @@
 package com.kintai.Domain.ManagedTime;
 
-import com.kintai.Domain.DataString.DomainStringList;
-
 import java.util.ArrayList;
 import java.util.List;
 
