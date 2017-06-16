@@ -13,6 +13,11 @@ public class HM {
         return localTime;
     }
 
+    public HM minus(HM amount){
+        LocalTime tmp = localTime.minusMinutes(amount.getMinuteValue());
+        return new HM(tmp.minusHours(amount.getHourValue()));
+    }
+
     public Hour getHour(){ return new Hour(getHourValue()); }
 
     public Minute getMinute(){ return new Minute(getMinuteValue()); }

@@ -1,17 +1,16 @@
 package com.kintai.Domain.BreakTime;
 
 import com.kintai.Domain.HM.HM;
-import com.kintai.Domain.HM.Hour;
-import com.kintai.Domain.HM.Minute;
-import com.kintai.Domain.TimeCalculator;
+
+import java.time.LocalTime;
 
 public class BreakTime {
     private HM start;
     private HM end;
 
     public BreakTime(Integer startHour,Integer startMinute,Integer endHour,Integer endMinute){
-        start = new HM(new Hour(startHour),new Minute(startMinute));
-        end = new HM(new Hour(endHour),new Minute(endMinute));
+        start = new HM(LocalTime.of(startHour,startMinute));
+        end = new HM(LocalTime.of(endHour,endMinute));
     }
 
     public HM getStart(){
@@ -31,7 +30,11 @@ public class BreakTime {
     }
 
     public HM getValue(){
-        return new TimeCalculator(start,end).getHM();
+        LocalTime endLocalTime = end.getLocalTime();
+        LocalTime startLocalTime = start.getLocalTime();
+        LocalTime tmp1st = endLocalTime.minusMinutes(startLocalTime.getMinute());
+        LocalTime tmp2nd = tmp1st.minusHours(startLocalTime.getHour());
+        return new HM(tmp2nd);
     }
 
     public Integer getStartHourValue(){

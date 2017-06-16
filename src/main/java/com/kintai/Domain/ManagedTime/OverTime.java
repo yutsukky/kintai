@@ -12,4 +12,12 @@ public class OverTime {
     public HM getHm() {
         return hm;
     }
+
+    public Integer getHourValue(){
+        return hm.getHourValue();
+    }
+
+    public Integer getMinuteValue(){
+        return hm.getMinuteValue();
+    }
 }
