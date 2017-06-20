@@ -18,6 +18,10 @@ public class HM {
         return new HM(tmp.minusHours(amount.getHourValue()));
     }
 
+    public boolean isBofore(HM other) {
+        return localTime.isBefore(other.localTime);
+    }
+
     public Hour getHour(){ return new Hour(getHourValue()); }
 
     public Minute getMinute(){ return new Minute(getMinuteValue()); }
