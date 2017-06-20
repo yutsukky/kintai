@@ -6,7 +6,7 @@ import com.kintai.Domain.StartYMDHM;
 import com.kintai.Domain.Ymd.YMD;
 
 public class CSVLine {
-    private String[] array;
+    private final String[] array;
 
     public CSVLine(StartYMDHM startYMDHM, EndYMDHM endYMDHM){
         YMD startYmd = startYMDHM.getYmd();

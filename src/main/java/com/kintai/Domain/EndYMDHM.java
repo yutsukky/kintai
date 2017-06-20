@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import static java.time.temporal.ChronoUnit.*;
 
 public class EndYMDHM {
-    private LocalDateTime localDateTime;
+    private final LocalDateTime localDateTime;
 
     public EndYMDHM(LocalDateTime localDateTime){
         this.localDateTime = localDateTime;

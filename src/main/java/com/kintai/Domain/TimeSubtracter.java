@@ -5,7 +5,7 @@ import com.kintai.Domain.HM.*;
 import java.time.LocalTime;
 
 public class TimeSubtracter {
-    private HM worktime;
+    private final HM worktime;
 
     public TimeSubtracter(StartYMDHM startYMDHM, EndYMDHM endYMDHM){
         Long diff_hour = endYMDHM.untilHour(startYMDHM);

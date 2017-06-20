@@ -1,8 +1,8 @@
 package com.kintai.Domain.ManagedTime;
 
 public class ManagedTime {
-    private ActualTime actualTime;
-    private OverTime overTime;
+    private final ActualTime actualTime;
+    private final OverTime overTime;
 
     public ManagedTime(ActualTime actualTime, OverTime overTime){
         this.actualTime = actualTime;

@@ -3,7 +3,7 @@ package com.kintai.Domain.HM;
 import java.time.LocalTime;
 
 public class HM {
-    private LocalTime localTime;
+    private final LocalTime localTime;
 
     public HM(LocalTime localTime){
         this.localTime = localTime;

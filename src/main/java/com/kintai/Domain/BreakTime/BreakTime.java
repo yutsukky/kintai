@@ -5,8 +5,8 @@ import com.kintai.Domain.HM.HM;
 import java.time.LocalTime;
 
 public class BreakTime {
-    private HM start;
-    private HM end;
+    private final HM start;
+    private final HM end;
 
     public BreakTime(Integer startHour,Integer startMinute,Integer endHour,Integer endMinute){
         start = new HM(LocalTime.of(startHour,startMinute));

@@ -1,7 +1,7 @@
 package com.kintai.Domain.Ymd;
 
 public class Year {
-    private Integer value;
+    private final Integer value;
 
     public Year(Integer value){
         this.value = value;

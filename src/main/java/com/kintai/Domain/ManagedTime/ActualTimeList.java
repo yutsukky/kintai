@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ActualTimeList {
-    private List<ActualTime> actualTimeList = new ArrayList<>();
+    private final List<ActualTime> actualTimeList;
     private TotalTime totalTime = new TotalTime(0,0);
 
     public ActualTimeList(List<ActualTime> actualTimeList){

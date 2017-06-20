@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BManagedInfoList {
-    private List<BManagedInfo> bManagedInfoList = new ArrayList<>();
+    private final List<BManagedInfo> bManagedInfoList;
 
     public BManagedInfoList(List<BManagedInfo> bManagedInfoList){
         this.bManagedInfoList = bManagedInfoList;

@@ -1,8 +1,8 @@
 package com.kintai.Domain.DataString;
 
 public class YMDHMString {
-    private YMDString ymdString;
-    private HMString hmString;
+    private final YMDString ymdString;
+    private final HMString hmString;
 
     public YMDHMString(String ymdString,String hmString){
         this.ymdString = new YMDString(ymdString);

@@ -1,7 +1,7 @@
 package com.kintai.Domain.Ymd;
 
 public class DayOfMonth {
-    private Integer value;
+    private final Integer value;
 
     public DayOfMonth(Integer value){
         this.value = value;

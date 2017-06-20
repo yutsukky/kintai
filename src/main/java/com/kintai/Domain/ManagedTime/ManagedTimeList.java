@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagedTimeList {
-    List<ManagedTime> managedTimeList = new ArrayList<>();
+    private final List<ManagedTime> managedTimeList;
 
     public ManagedTimeList(List<ManagedTime> managedTimeList){
         this.managedTimeList = managedTimeList;

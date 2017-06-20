@@ -6,7 +6,7 @@ import java.time.LocalTime;
 
 public class YMD {
 
-    private LocalDate localDate;
+    private final LocalDate localDate;
 
     public YMD(LocalDate localDate){
         this.localDate = localDate;

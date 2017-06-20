@@ -1,7 +1,7 @@
 package com.kintai.Domain.DataString;
 
 public class HMString {
-    private String value;
+    private final String value;
 
     public HMString(String value){
         this.value = value;

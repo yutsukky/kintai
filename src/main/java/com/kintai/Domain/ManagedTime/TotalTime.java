@@ -1,8 +1,8 @@
 package com.kintai.Domain.ManagedTime;
 
 public class TotalTime {
-    private Integer hour;
-    private Integer minute;
+    private final Integer hour;
+    private final Integer minute;
 
     public TotalTime(Integer hour, Integer minute){
         this.hour = hour;

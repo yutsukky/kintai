@@ -4,7 +4,7 @@ package com.kintai.Domain.ManagedTime;
 import com.kintai.Domain.HM.HM;
 
 public class ActualTime {
-    private HM hm;
+    private final HM hm;
 
     public ActualTime(HM hm){
         this.hm = hm;

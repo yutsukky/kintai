@@ -6,7 +6,7 @@ import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.WorkInfo;
 
 public class CSVLineCreate {
-    private CSVLine csvLine;
+    private final CSVLine csvLine;
 
     public CSVLineCreate(WorkInfo workInfo) {
         StartYMDHM startYMDHM = workInfo.getStartYMDHM();

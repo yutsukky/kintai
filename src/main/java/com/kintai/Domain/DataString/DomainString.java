@@ -1,8 +1,8 @@
 package com.kintai.Domain.DataString;
 
 public class DomainString {
-    private YMDHMString startString;
-    private YMDHMString endString;
+    private final YMDHMString startString;
+    private final YMDHMString endString;
 
     public DomainString(String key,String[] array){
         startString = new YMDHMString(key,array[0]);

@@ -4,7 +4,7 @@ import com.kintai.Domain.Limit;
 import com.kintai.Domain.Limitter;
 
 public class Month {
-    private Integer value;
+    private final Integer value;
 
     public Month(Integer value){
         Integer MIN = 1;

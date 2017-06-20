@@ -10,8 +10,8 @@ import com.kintai.Domain.Ymd.YMD;
 import com.kintai.Domain.Ymd.YMDFactory;
 
 public class BManagedInfo {
-    private YMD ymd;
-    private ManagedTime managedTime;
+    private final YMD ymd;
+    private final ManagedTime managedTime;
 
     public BManagedInfo(DomainString domainString){
         YMDHMString ymdhmString = domainString.getStartString();

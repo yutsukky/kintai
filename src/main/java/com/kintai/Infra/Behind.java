@@ -1,7 +1,7 @@
 package com.kintai.Infra;
 
 public class Behind {
-    private String[] args;
+    private final String[] args;
 
     public Behind(String[] args){
         this.args = args;

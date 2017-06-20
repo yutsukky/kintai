@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DomainStringList {
-    private List<DomainString> domainStringList = new ArrayList<>();
+    private final List<DomainString> domainStringList = new ArrayList<>();
 
     public DomainStringList(HashMap<String, String[]> rawHash){
         rawHash.forEach((key,value) -> {

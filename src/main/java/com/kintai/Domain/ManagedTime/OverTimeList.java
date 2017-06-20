@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OverTimeList {
-    private List<OverTime> overTimeList = new ArrayList<>();
+    private final List<OverTime> overTimeList;
     private TotalTime totalTime = new TotalTime(0,0);
 
     public OverTimeList(List<OverTime> overTimeList){

@@ -4,7 +4,7 @@ import com.kintai.Domain.Limit;
 import com.kintai.Domain.Limitter;
 
 public class Minute {
-    private Integer value;
+    private final Integer value;
 
     public Minute(Integer value){
         Integer MIN = 0;

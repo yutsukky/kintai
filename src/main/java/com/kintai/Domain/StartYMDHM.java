@@ -6,7 +6,7 @@ import com.kintai.Domain.Ymd.*;
 import java.time.LocalDateTime;
 
 public class StartYMDHM {
-    private LocalDateTime localDateTime;
+    private final LocalDateTime localDateTime;
 
     public StartYMDHM(LocalDateTime localDateTime){
         this.localDateTime = localDateTime;

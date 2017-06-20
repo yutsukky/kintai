@@ -3,8 +3,8 @@ package com.kintai.Domain;
 import com.kintai.Domain.DataString.DomainString;
 
 public class WorkInfo {
-    private StartYMDHM startYMDHM;
-    private EndYMDHM endYMDHM;
+    private final StartYMDHM startYMDHM;
+    private final EndYMDHM endYMDHM;
 
     public WorkInfo(DomainString domainString){
         startYMDHM = new StartYMDHMFactory().run(domainString.getStartString());
