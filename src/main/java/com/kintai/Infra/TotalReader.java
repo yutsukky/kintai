@@ -9,6 +9,6 @@ public class TotalReader {
     public void run(){
         DomainStringList domainStringList = new DomainStringList(new CSVRead().execute());
         TotalManagedTimeRepository totalManagedTimeRepository = new ResultOutput();
-        new ManagedInfoOutput().run(domainStringList,totalManagedTimeRepository);
+        new ManagedInfoOutput(totalManagedTimeRepository).run(domainStringList);
     }
 }

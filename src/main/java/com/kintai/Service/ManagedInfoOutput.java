@@ -6,7 +6,13 @@ import com.kintai.Domain.ManagedTime.ManagedTimeList;
 import com.kintai.Repository.TotalManagedTimeRepository;
 
 public class ManagedInfoOutput {
-    public void run(DomainStringList domainStringList, TotalManagedTimeRepository totalManagedTimeRepository){
+    private final TotalManagedTimeRepository totalManagedTimeRepository;
+
+    public ManagedInfoOutput(TotalManagedTimeRepository totalManagedTimeRepository){
+        this.totalManagedTimeRepository = totalManagedTimeRepository;
+    }
+
+    public void run(DomainStringList domainStringList){
         BManagedInfoList bManagedInfoList = domainStringList.toBManagedInfoList();
         ManagedTimeList managedTimeList = bManagedInfoList.toManagedTimeList();
         totalManagedTimeRepository.execute(managedTimeList.getTotalManageTime());
