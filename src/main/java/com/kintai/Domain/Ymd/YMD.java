@@ -1,45 +1,40 @@
 package com.kintai.Domain.Ymd;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class YMD {
-    private YM ym;
-    private DayOfMonth day;
 
-    public YMD(YM ym,DayOfMonth day){
-        Integer OLD = 6;
-        LocalDate today = LocalDate.now();
-        LocalDate oldest = today.minusMonths(OLD);
-        LocalDate value = LocalDate.of(ym.getYearValue(),ym.getMonthValue(),day.getValue());
-        if(value.isAfter(today)){
-            throw new RuntimeException("入力値が未来です．");
-        }
-        if(value.isBefore(oldest)){
-            throw new RuntimeException(OLD + "ヶ月以上前の勤怠入力は無効です．");
-        }
-        this.ym = ym;
-        this.day = day;
+    private final LocalDate localDate;
+
+    public YMD(LocalDate localDate){
+        this.localDate = localDate;
     }
 
-    public YM getYm() {
-        return ym;
+    public LocalDate getLocalDate() {
+        return localDate;
     }
 
-    public DayOfMonth getDay() {
-        return day;
+    public LocalDateTime atTime(LocalTime localTime){
+        return localDate.atTime(localTime);
+    }
+
+    public String getYMDString(){
+        return String.format("%04d%02d%02d",getYearValue(),getMonthValue(),getDayValue());
     }
 
     public Integer getDayValue(){
-        return day.getValue();
+        return localDate.getDayOfMonth();
     }
 
     public Integer getMonthValue(){
-        Month month = ym.getMonth();
-        return month.getValue();
+        return localDate.getMonthValue();
     }
 
     public Integer getYearValue(){
-        Year year = ym.getYear();
-        return year.getValue();
+        return localDate.getYear();
     }
+
+
 }

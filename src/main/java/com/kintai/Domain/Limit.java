@@ -1,8 +1,8 @@
 package com.kintai.Domain;
 
 public class Limit {
-    private Integer min;
-    private Integer max;
+    private final Integer min;
+    private final Integer max;
 
     public Limit(Integer min,Integer max){
         if(min >= max){

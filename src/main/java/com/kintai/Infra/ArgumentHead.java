@@ -12,7 +12,7 @@ public class ArgumentHead {
 
     enum Command{
         input((behind) -> new InputWriter().run(behind)),
-        total((args) -> System.out.println("totalだよ"));
+        total((nothing) -> new TotalReader().run());
 
         final Consumer<Behind> function;
 

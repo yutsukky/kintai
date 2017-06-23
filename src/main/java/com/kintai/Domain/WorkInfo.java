@@ -1,25 +1,21 @@
 package com.kintai.Domain;
 
-import com.kintai.Infra.Behind;
-import com.kintai.Domain.WorkTime.WorkTime;
-import com.kintai.Domain.WorkTime.WorkTimeTransform;
-import com.kintai.Domain.Ymd.YMD;
-import com.kintai.Domain.Ymd.YMDTransform;
+import com.kintai.Domain.DataString.DomainString;
 
 public class WorkInfo {
-    private YMD ymd;
-    private WorkTime worktime;
+    private final StartYMDHM startYMDHM;
+    private final EndYMDHM endYMDHM;
 
-    public WorkInfo(Behind behind){
-        this.ymd = new YMDTransform().run(behind.getFirst());
-        this.worktime = new WorkTimeTransform().run(behind.getSecond(),behind.getThird());
+    public WorkInfo(DomainString domainString){
+        startYMDHM = new StartYMDHMFactory().run(domainString.getStartString());
+        endYMDHM = new EndYMDHMFactory().run(domainString.getEndString(),startYMDHM);
     }
 
-    public YMD getYmd() {
-        return ymd;
+    public StartYMDHM getStartYMDHM() {
+        return startYMDHM;
     }
 
-    public WorkTime getWorktime() {
-        return worktime;
+    public EndYMDHM getEndYMDHM() {
+        return endYMDHM;
     }
 }

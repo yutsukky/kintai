@@ -1,7 +1,7 @@
 package com.kintai.Infra;
 
 public class Head {
-    private String str;
+    private final String str;
 
     public Head(String str){
         this.str = str;

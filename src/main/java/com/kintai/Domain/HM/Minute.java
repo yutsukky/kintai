@@ -1,14 +1,14 @@
-package com.kintai.Domain.Ymd;
+package com.kintai.Domain.HM;
 
 import com.kintai.Domain.Limit;
 import com.kintai.Domain.Limitter;
 
-public class Month {
+public class Minute {
     private final Integer value;
 
-    public Month(Integer value){
-        Integer MIN = 1;
-        Integer MAX = 12;
+    public Minute(Integer value){
+        Integer MIN = 0;
+        Integer MAX = 59;
         new Limitter().run(value,new Limit(MIN,MAX));
         this.value = value;
     }
