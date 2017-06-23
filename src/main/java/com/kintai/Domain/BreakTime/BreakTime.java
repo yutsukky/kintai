@@ -8,9 +8,9 @@ public class BreakTime {
     private final HM start;
     private final HM end;
 
-    public BreakTime(Integer startHour,Integer startMinute,Integer endHour,Integer endMinute){
-        start = new HM(LocalTime.of(startHour,startMinute));
-        end = new HM(LocalTime.of(endHour,endMinute));
+    public BreakTime(HM start,HM end){
+        this.start = start;
+        this.end = end;
     }
 
     public HM getStart(){
